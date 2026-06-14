@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jhansi Lakshmi Gondi | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Jhansi Lakshmi Gondi - Full Stack Web Developer with 2+ years of experience building responsive, high-performance web applications across Real Estate, Construction, Finance, Sports Infrastructure, and E-commerce domains.">
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Config for Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: '#0ea5e9', // Sky 500
+            secondary: '#8b5cf6', // Violet 500
+            dark: '#0f172a', // Slate 900
+            darker: '#020617', // Slate 950
+            surface: '#1e293b', // Slate 800
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #0ea5e9, #8b5cf6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Hero Background Animation */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+  </style>
+</head>
+
+<body class="bg-darker text-slate-300 font-sans overflow-x-hidden relative selection:bg-primary selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 top-0 bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-800" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="#" class="text-2xl font-bold font-serif text-white tracking-wider flex items-center gap-2">
+          <span class="text-primary">&lt;</span>Jhansi<span class="text-primary">/&gt;</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#home"
+            class="hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium">Home</a>
+          <a href="#about"
+            class="hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium">About</a>
+          <a href="#skills"
+            class="hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium">Skills</a>
+          <a href="#experience"
+            class="hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium">Experience</a>
+          <a href="#projects"
+            class="hover:text-primary transition-colors text-sm uppercase tracking-widest font-medium">Projects</a>
+          <a href="#contact"
+            class="px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm font-medium">Contact
+            Me</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-surface border-t border-slate-700 absolute w-full left-0 right-0 glass"
+      id="mobile-menu">
+      <div class="px-4 pt-2 pb-6 space-y-2">
+        <a href="#home"
+          class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-slate-800 rounded-md">Home</a>
+        <a href="#about"
+          class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-slate-800 rounded-md">About</a>
+        <a href="#skills"
+          class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-slate-800 rounded-md">Skills</a>
+        <a href="#experience"
+          class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-slate-800 rounded-md">Experience</a>
+        <a href="#projects"
+          class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-slate-800 rounded-md">Projects</a>
+        <a href="#contact"
+          class="block px-3 py-2 text-base font-medium hover:text-primary hover:bg-slate-800 rounded-md">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative pt-32 pb-10 md:pt-20 md:pb-0 overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+    <div
+      class="absolute top-20 right-20 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-pulse-slow">
+    </div>
+    <div
+      class="absolute bottom-20 left-20 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-pulse-slow section-delay-1000">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <p class="text-primary font-medium mb-4 tracking-widest uppercase text-sm">Welcome to my universe</p>
+          <h1 class="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight">
+            Hi, I'm <br>
+            <span class="text-gradient">Jhansi Lakshmi</span>
+          </h1>
+          <h2 class="text-2xl md:text-3xl text-slate-400 mb-8 font-light">
+            I am a <span id="typewriter" class="text-primary font-semibold"></span><span class="animate-blink">|</span>
+          </h2>
+          <p class="text-slate-400 mb-10 max-w-lg leading-relaxed">
+            Full Stack Web Developer with 2+ years of experience designing, developing, deploying, and maintaining
+            responsive web applications across Real Estate, Construction, Finance, Sports Infrastructure, E-commerce,
+            and Corporate Business domains.
+          </p>
+          <div class="flex flex-row flex-nowrap items-center gap-2 md:gap-4 w-full mt-2">
+            <a href="jhansi_resume.pdf" target="_blank"
+              class="relative px-4 py-2.5 md:px-8 md:py-3 group rounded-full text-white font-medium overflow-hidden transition-all transform hover:-translate-y-1 flex items-center justify-center whitespace-nowrap">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-primary to-secondary group-hover:opacity-90 transition-opacity">
+              </div>
+              <div class="absolute inset-0 bg-white/20 group-hover:animate-pulse"></div>
+              <span class="relative z-10 flex items-center gap-1.5 md:gap-2 uppercase tracking-wide text-[10px] sm:text-[11px] md:text-xs font-bold">
+                <i class="fas fa-eye"></i> View Resume
+              </span>
+            </a>
+            <a href="#projects"
+              class="px-4 py-2.5 md:px-8 md:py-3 text-xs sm:text-sm md:text-base border border-slate-600 rounded-full text-white font-medium hover:bg-slate-800 hover:border-slate-500 transition-all whitespace-nowrap">
+              View Work
+            </a>
+            <a href="#contact"
+              class="px-4 py-2.5 md:px-8 md:py-3 text-xs sm:text-sm md:text-base border border-slate-600 rounded-full text-white font-medium hover:bg-slate-800 hover:border-slate-500 transition-all whitespace-nowrap">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="relative mt-8 md:mt-0 flex justify-center items-center h-[350px] md:h-[500px]" data-aos="fade-left" data-aos-duration="1200">
+          <!-- Abstract Tech Visual -->
+          <div class="relative w-full max-w-[500px] h-full flex items-center justify-center animate-float">
+            <!-- Center React Card -->
+            <div
+              class="absolute w-32 h-32 md:w-64 md:h-64 bg-slate-800 rounded-2xl rotate-12 border border-slate-700 z-10 flex items-center justify-center group hover:rotate-6 transition-all duration-500 shadow-2xl glass">
+              <i class="fab fa-react text-5xl md:text-6xl text-primary group-hover:scale-110 transition-transform"></i>
+            </div>
+            <div
+              class="absolute w-32 h-32 md:w-64 md:h-64 bg-slate-800 rounded-2xl -rotate-12 border border-slate-700 z-0 flex items-center justify-center translate-x-6 translate-y-6 md:translate-x-12 md:translate-y-12 opacity-60 backdrop-blur-sm">
+            </div>
+            
+            <!-- Floating Icons -->
+            <div
+              class="absolute w-16 h-16 md:w-24 md:h-24 bg-surface rounded-xl border border-slate-600 top-4 md:top-0 right-4 md:right-10 z-20 flex items-center justify-center animate-bounce shadow-lg">
+              <i class="fab fa-js text-3xl md:text-4xl text-yellow-400"></i>
+            </div>
+            <div
+              class="absolute w-14 h-14 md:w-20 md:h-20 bg-surface rounded-xl border border-slate-600 bottom-12 md:bottom-10 left-4 md:left-10 z-20 flex items-center justify-center animate-pulse shadow-lg delay-700">
+              <i class="fab fa-node-js text-3xl md:text-4xl text-green-500"></i>
+            </div>
+            <div
+              class="absolute w-12 h-12 md:w-16 md:h-16 bg-surface rounded-xl border border-slate-600 top-16 md:top-20 left-2 md:left-4 z-20 flex items-center justify-center animate-pulse shadow-lg delay-300">
+              <i class="fab fa-html5 text-2xl md:text-3xl text-orange-500"></i>
+            </div>
+            <div
+              class="absolute w-12 h-12 md:w-16 md:h-16 bg-surface rounded-xl border border-slate-600 bottom-20 md:bottom-24 right-2 md:right-5 z-20 flex items-center justify-center animate-bounce shadow-lg delay-500">
+              <i class="fab fa-php text-2xl md:text-3xl text-indigo-400"></i>
+            </div>
+            <div
+              class="absolute w-14 h-14 md:w-20 md:h-20 bg-surface rounded-xl border border-slate-600 top-[35%] md:top-[40%] left-0 md:-left-8 z-20 flex items-center justify-center animate-bounce shadow-lg delay-1000">
+              <i class="fab fa-laravel text-3xl md:text-4xl text-red-500"></i>
+            </div>
+            <div
+              class="absolute w-12 h-12 md:w-16 md:h-16 bg-surface rounded-xl border border-slate-600 bottom-0 md:-bottom-4 right-[35%] md:right-[40%] z-20 flex items-center justify-center animate-pulse shadow-lg delay-150">
+              <i class="fab fa-python text-2xl md:text-3xl text-blue-400"></i>
+            </div>
+            <div
+              class="absolute w-12 h-12 md:w-16 md:h-16 bg-surface rounded-xl border border-slate-600 top-2 md:top-5 left-[35%] md:left-[40%] z-20 flex items-center justify-center animate-pulse shadow-lg delay-75">
+              <i class="fas fa-database text-2xl md:text-3xl text-cyan-400"></i>
+            </div>
+            <div
+              class="absolute w-12 h-12 md:w-16 md:h-16 bg-surface rounded-xl border border-slate-600 top-[35%] right-0 md:-right-10 z-20 flex items-center justify-center animate-bounce shadow-lg delay-200">
+              <i class="fab fa-java text-2xl md:text-3xl text-orange-400"></i>
+            </div>
+            
+            <!-- Circle Orbits -->
+            <div
+              class="absolute w-[280px] h-[280px] md:w-[450px] md:h-[450px] border border-slate-700/30 rounded-full animate-[spin_10s_linear_infinite]">
+            </div>
+            <div
+              class="absolute w-[220px] h-[220px] md:w-[350px] md:h-[350px] border border-slate-700/50 rounded-full animate-[spin_15s_linear_infinite_reverse]">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about"
+      class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 hover:text-primary transition-colors animate-bounce">
+      <span class="text-xs uppercase tracking-widest">Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-white mb-4">About Me</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="glass p-8 rounded-2xl" data-aos="fade-right">
+          <h3 class="text-2xl font-bold text-white mb-4">Hello! I'm Jhansi.</h3>
+          <p class="text-slate-400 mb-6 leading-relaxed">
+            Full Stack Web Developer with 2+ years of experience in designing, developing, deploying, and maintaining
+            responsive web applications and business websites. Skilled in frontend and backend development, API
+            integration, database management, and performance optimization.
+          </p>
+          <p class="text-slate-400 mb-6 leading-relaxed">
+            Experienced in website hosting, domain management, SSL configuration, server maintenance, and production
+            deployments. Delivered secure, high-performance web solutions across Real Estate, Construction, Finance,
+            Sports Infrastructure, E-commerce, and Corporate Business domains.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 mt-8" id="stats-container">
+            <div class="border border-slate-700 p-4 rounded-xl hover:border-primary transition-colors">
+              <h4 class="text-3xl font-bold text-primary mb-1"><span class="stat-number" data-target="2"
+                  data-suffix="+">0</span></h4>
+              <p class="text-sm text-slate-500 uppercase tracking-wider">Years Exp.</p>
+            </div>
+            <div class="border border-slate-700 p-4 rounded-xl hover:border-secondary transition-colors">
+              <h4 class="text-3xl font-bold text-secondary mb-1"><span class="stat-number" data-target="15"
+                  data-suffix="+">0</span></h4>
+              <p class="text-sm text-slate-500 uppercase tracking-wider">Projects</p>
+            </div>
+            <div class="border border-slate-700 p-4 rounded-xl hover:border-primary transition-colors">
+              <h4 class="text-3xl font-bold text-primary mb-1"><span class="stat-number" data-target="9.08"
+                  data-decimals="2">0</span></h4>
+              <p class="text-sm text-slate-500 uppercase tracking-wider">CGPA (B.Tech)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6" data-aos="fade-left">
+          <div class="glass p-6 rounded-xl border-l-4 border-primary">
+            <h4 class="text-xl font-bold text-white mb-2">Education</h4>
+            <ul class="space-y-4">
+              <li class="relative pl-6 border-l border-slate-700">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary"></div>
+                <h5 class="text-white font-medium">Bachelor of Technology (ECE)</h5>
+                <p class="text-slate-400 text-sm">Aditya Engineering College | 2020-2024</p>
+                <p class="text-primary text-xs mt-1 font-mono">9.08 CGPA</p>
+              </li>
+              <li class="relative pl-6 border-l border-slate-700">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-secondary"></div>
+                <h5 class="text-white font-medium">Intermediate (MPC)</h5>
+                <p class="text-slate-400 text-sm">Sri Vagdevi Junior College | 2018-2020</p>
+                <p class="text-secondary text-xs mt-1 font-mono">9.88 CGPA</p>
+              </li>
+              <li class="relative pl-6 border-l border-slate-700">
+                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-500"></div>
+                <h5 class="text-white font-medium">SSC</h5>
+                <p class="text-slate-400 text-sm">Sri Siddardha EM High School | 2017-2018</p>
+                <p class="text-slate-400 text-xs mt-1 font-mono">10 CGPA</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 relative overflow-hidden bg-darker">
+    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-20 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-white mb-4">Technical Skills</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+        <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Tools and technologies that define my stack.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Front-End Technologies -->
+        <div class="glass p-6 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up"
+          data-aos-delay="100">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center">
+              <i class="fas fa-code text-pink-500 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Front-End</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">HTML5</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">CSS3</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">JavaScript</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">TypeScript</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">React.js</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">Next.js</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">Alpine.js</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">Three.js</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-pink-500 transition-colors">Blade</span>
+          </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="glass p-6 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up"
+          data-aos-delay="200">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-lg bg-violet-500/10 flex items-center justify-center">
+              <i class="fas fa-layer-group text-violet-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Frameworks</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-violet-400 transition-colors">Laravel</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-violet-400 transition-colors">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-violet-400 transition-colors">Bootstrap</span>
+          </div>
+        </div>
+
+        <!-- Back-End Technologies -->
+        <div class="glass p-6 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up"
+          data-aos-delay="300">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
+              <i class="fas fa-server text-green-500 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Back-End</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-green-500 transition-colors">Node.js</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-green-500 transition-colors">Express.js</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-green-500 transition-colors">PHP</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-green-500 transition-colors">RESTful
+              APIs</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-green-500 transition-colors">API
+              Integration</span>
+          </div>
+        </div>
+
+        <!-- Database & CMS -->
+        <div class="glass p-6 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up"
+          data-aos-delay="400">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+              <i class="fas fa-database text-cyan-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Database & CMS</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-cyan-400 transition-colors">MySQL</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-cyan-400 transition-colors">WordPress</span>
+          </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="glass p-6 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up"
+          data-aos-delay="500">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center">
+              <i class="fas fa-terminal text-orange-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Programming Languages</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-orange-400 transition-colors">Core
+              Java</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-orange-400 transition-colors">Python</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-orange-400 transition-colors">C++</span>
+          </div>
+        </div>
+
+        <!-- Tools & Version Control -->
+        <div class="glass p-6 rounded-2xl transform hover:scale-105 transition-all duration-300" data-aos="fade-up"
+          data-aos-delay="600">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <i class="fas fa-tools text-blue-400 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Tools & Version Control</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-blue-400 transition-colors">GitHub</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-blue-400 transition-colors">VS
+              Code</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-blue-400 transition-colors">Postman</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-blue-400 transition-colors">XAMPP</span>
+            <span
+              class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-blue-400 transition-colors">Vite</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- AI Development Tools (Full Width) -->
+      <div class="mt-8 glass p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="700">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
+            <i class="fas fa-robot text-purple-400 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">AI Development Tools</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-purple-400 transition-colors">ChatGPT</span>
+          <span
+            class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-purple-400 transition-colors">Cursor
+            AI</span>
+          <span
+            class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-purple-400 transition-colors">Antigravity</span>
+          <span
+            class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-purple-400 transition-colors">GitHub
+            Copilot</span>
+          <span
+            class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-purple-400 transition-colors">Gemini
+            AI</span>
+          <span
+            class="px-3 py-1 bg-slate-800 rounded-full text-xs font-mono text-slate-300 border border-slate-700 hover:border-purple-400 transition-colors">Trae
+            AI</span>
+        </div>
+      </div>
+
+      <!-- Certifications Strip -->
+      <div class="mt-8 glass p-6 rounded-xl flex flex-wrap justify-around gap-6 items-center border border-slate-700/50"
+        data-aos="fade-in">
+        <span class="text-slate-400 font-medium text-sm text-center">🏆 IT Specialist HTML &amp; CSS</span>
+        <span class="text-slate-400 font-medium text-sm text-center">🏆 MTA Java Certification</span>
+        <span class="text-slate-400 font-medium text-sm text-center">🏆 MTA Python Certification</span>
+        <span class="text-slate-400 font-medium text-sm text-center">🏆 SoloLearn Web Dev</span>
+        <span class="text-slate-400 font-medium text-sm text-center">🏆 SoloLearn SQL</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-white mb-4">Experience</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+      </div>
+
+      <div class="relative border-l border-slate-700 ml-4 md:ml-12 space-y-12">
+
+        <!-- VBR Landscaping & Sports Fields — Current -->
+        <div class="relative pl-8 md:pl-12" data-aos="fade-right">
+          <div class="absolute -left-[9px] top-6 w-5 h-5 rounded-full bg-darker border-4 border-primary"></div>
+          <div class="glass p-8 rounded-2xl hover:border-primary/50 transition-colors border border-transparent">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+              <h3 class="text-xl md:text-2xl font-bold text-white">Full Stack Web Developer</h3>
+              <span class="text-primary font-mono text-sm bg-primary/10 px-3 py-1 rounded-full w-fit">Mar 2026 –
+                Present</span>
+            </div>
+            <h4 class="text-lg text-slate-400 font-medium mb-5 flex items-center gap-2">
+              <i class="fas fa-briefcase text-slate-500"></i> VBR Landscaping &amp; Sports Fields Pvt. Ltd., Hyderabad
+            </h4>
+            <div class="space-y-3 text-slate-400 text-sm leading-relaxed">
+              <p>Developed and maintained multiple corporate and business websites for the VBR Group ecosystem, covering
+                frontend &amp; backend development, API integrations, hosting management, domain setup, SSL
+                configuration, performance optimization, and technical SEO.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-3 mt-5">
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://vbrgroup.in/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">VBR Group – Corporate Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">WordPress, HTML5, Tailwind CSS, Alpine.js</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://vbrlandscaping.com/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">VBR Landscaping Pvt. Ltd. – Landscaping
+                  Services Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML5, Tailwind CSS, Alpine.js, PHP</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://kisanplant.technology/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">Kisan Plant – Agricultural & Industrial
+                  Solutions Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">React.js, Tailwind CSS, PHP</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://vbrsportsfields.com/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">VBR Sports Fields Pvt. Ltd. – Sports
+                  Infrastructure Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML5, Tailwind CSS, Alpine.js, PHP</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://vbrconstructions.com/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">VBR Constructions Pvt. Ltd. – Reality &
+                  Construction Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML5, Tailwind CSS, Alpine.js, PHP</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://finora.financial/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">Finora Financial Services Pvt. Ltd. –
+                  Financial Services Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">React.js, Laravel, PHP, Tailwind CSS</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50 sm:col-span-2">
+                <a href="https://veerabhadraswamy.com/" target="_blank"
+                  class="text-primary text-xs font-semibold hover:underline">Veerabhadra Swamy Temple – Religious &
+                  Informational Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML5, Tailwind CSS, Alpine.js, PHP</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="text-xs font-mono text-slate-500">#React</span>
+              <span class="text-xs font-mono text-slate-500">#Laravel</span>
+              <span class="text-xs font-mono text-slate-500">#Tailwind</span>
+              <span class="text-xs font-mono text-slate-500">#AlpineJS</span>
+              <span class="text-xs font-mono text-slate-500">#PHP</span>
+              <span class="text-xs font-mono text-slate-500">#TechnicalSEO</span>
+              <span class="text-xs font-mono text-slate-500">#Deployment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Digitali360 -->
+        <div class="relative pl-8 md:pl-12" data-aos="fade-right" data-aos-delay="100">
+          <div class="absolute -left-[9px] top-6 w-5 h-5 rounded-full bg-darker border-4 border-secondary"></div>
+          <div class="glass p-8 rounded-2xl hover:border-secondary/50 transition-colors border border-transparent">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+              <h3 class="text-xl md:text-2xl font-bold text-white">Web Developer</h3>
+              <span class="text-secondary font-mono text-sm bg-secondary/10 px-3 py-1 rounded-full w-fit">May 2025 – Mar
+                2026</span>
+            </div>
+            <h4 class="text-lg text-slate-400 font-medium mb-5 flex items-center gap-2">
+              <i class="fas fa-briefcase text-slate-500"></i> Digitali360, Hyderabad
+            </h4>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://proppins.com/" target="_blank"
+                  class="text-secondary text-xs font-semibold hover:underline">Proppins – Real Estate Web Platform ↗</a>
+                <p class="text-slate-500 text-xs mt-1">React.js, MySQL, REST APIs, Laravel</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://alanatipindivantalu.com/" target="_blank"
+                  class="text-secondary text-xs font-semibold hover:underline">Alanati Pindivantalu – Traditional Sweets
+                  & Hot Foods Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML, Tailwind CSS, Alpine.js, Blade</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://sansai.com/" target="_blank"
+                  class="text-secondary text-xs font-semibold hover:underline">Sansai – Business Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML, Tailwind CSS, Laravel, Blade, PHP</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://madroidix.com/" target="_blank"
+                  class="text-secondary text-xs font-semibold hover:underline">Madroidix Technologies – Company Website
+                  ↗</a>
+                <p class="text-slate-500 text-xs mt-1">HTML, Tailwind CSS, Alpine.js, Laravel</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="text-xs font-mono text-slate-500">#React</span>
+              <span class="text-xs font-mono text-slate-500">#Laravel</span>
+              <span class="text-xs font-mono text-slate-500">#Tailwind</span>
+              <span class="text-xs font-mono text-slate-500">#AlpineJS</span>
+              <span class="text-xs font-mono text-slate-500">#MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neosys Tech Solutions -->
+        <div class="relative pl-8 md:pl-12" data-aos="fade-right" data-aos-delay="200">
+          <div class="absolute -left-[9px] top-6 w-5 h-5 rounded-full bg-darker border-4 border-slate-500"></div>
+          <div class="glass p-8 rounded-2xl hover:border-slate-500/50 transition-colors border border-transparent">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+              <h3 class="text-xl md:text-2xl font-bold text-white">Associate Software Trainee</h3>
+              <span class="text-slate-400 font-mono text-sm bg-slate-800 px-3 py-1 rounded-full w-fit">June 2024 – May
+                2025</span>
+            </div>
+            <h4 class="text-lg text-slate-400 font-medium mb-5 flex items-center gap-2">
+              <i class="fas fa-briefcase text-slate-500"></i> Neosys Tech Solutions, Hyderabad
+            </h4>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <span class="text-slate-300 text-xs font-semibold">Neosys Tech Solutions – Corporate Website</span>
+                <p class="text-slate-500 text-xs mt-1">React.js, HTML5, CSS3, Bootstrap, JavaScript</p>
+              </div>
+              <div class="bg-darker/50 p-3 rounded-xl border border-slate-700/50">
+                <a href="https://himythestreetcuisine.co.uk/" target="_blank"
+                  class="text-slate-300 text-xs font-semibold hover:underline">Himy The Street Cuisine – Restaurant
+                  Website ↗</a>
+                <p class="text-slate-500 text-xs mt-1">React.js, Tailwind CSS, JavaScript</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="text-xs font-mono text-slate-500">#React</span>
+              <span class="text-xs font-mono text-slate-500">#Tailwind</span>
+              <span class="text-xs font-mono text-slate-500">#Bootstrap</span>
+              <span class="text-xs font-mono text-slate-500">#JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-darker overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold font-serif text-white mb-4">Featured Projects</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- VBR Group – Corporate Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-primary transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="0">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-building text-5xl text-slate-600 group-hover:text-primary transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors leading-snug">VBR
+              Group – Corporate Website</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Corporate website representing multiple business verticals under
+              VBR Group with responsive interfaces, SEO optimization, and deployment management.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">WordPress</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML5</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+            </div>
+            <a href="https://vbrgroup.in/" target="_blank"
+              class="inline-flex items-center gap-2 text-primary hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- VBR Landscaping Pvt. Ltd. – Landscaping Services Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-green-400 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-leaf text-5xl text-slate-600 group-hover:text-green-400 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-green-400 transition-colors leading-snug">VBR
+              Landscaping – Landscaping Services</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Responsive website showcasing landscaping services, project
+              portfolios, and business offerings with visually engaging layouts and project galleries.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML5</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">PHP</span>
+            </div>
+            <a href="https://vbrlandscaping.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-green-400 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Kisan Plant – Agricultural & Industrial Solutions Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-lime-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-seedling text-5xl text-slate-600 group-hover:text-lime-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-lime-500 transition-colors leading-snug">Kisan
+              Plant – Agricultural & Industrial Solutions</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Responsive business website for agricultural machinery and
+              industrial solutions with modern UI, technical SEO, and optimized performance.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">React.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">PHP</span>
+            </div>
+            <a href="https://kisanplant.technology/" target="_blank"
+              class="inline-flex items-center gap-2 text-lime-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- VBR Sports Fields Pvt. Ltd. – Sports Infrastructure Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-yellow-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-yellow-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-futbol text-5xl text-slate-600 group-hover:text-yellow-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-yellow-500 transition-colors leading-snug">VBR
+              Sports Fields – Sports Infrastructure</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Professional website highlighting sports infrastructure
+              services, turf systems, and completed sports facility projects with responsive, optimized layouts.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML5</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">PHP</span>
+            </div>
+            <a href="https://vbrsportsfields.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-yellow-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- VBR Constructions Pvt. Ltd. – Reality & Construction Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-amber-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-amber-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-hard-hat text-5xl text-slate-600 group-hover:text-amber-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-amber-500 transition-colors leading-snug">VBR
+              Constructions – Reality & Construction</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Corporate website showcasing construction services,
+              infrastructure expertise, and company capabilities with reusable components and responsive layouts.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML5</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">PHP</span>
+            </div>
+            <a href="https://vbrconstructions.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-amber-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Finora Financial Services Pvt. Ltd. – Financial Services Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-emerald-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="500">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-chart-line text-5xl text-slate-600 group-hover:text-emerald-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-emerald-500 transition-colors leading-snug">
+              Finora Financial Services – Financial Services</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Finance-oriented website with consulting services, SEO-friendly
+              page structures, and optimized user journeys for improved lead generation.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">React.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Laravel</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">PHP</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+            </div>
+            <a href="https://finora.financial/" target="_blank"
+              class="inline-flex items-center gap-2 text-emerald-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Veerabhadra Swamy Temple – Religious & Informational Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-orange-400 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="600">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-orange-400 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-place-of-worship text-5xl text-slate-600 group-hover:text-orange-400 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors leading-snug">
+              Veerabhadra Swamy Temple – Religious & Informational</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Informational platform covering temple services, rituals,
+              events, and heritage with responsive layouts and intuitive navigation across devices.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML5</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">PHP</span>
+            </div>
+            <a href="https://veerabhadraswamy.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-orange-400 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Proppins – Real Estate Web Platform -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-secondary transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="700">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-home text-5xl text-slate-600 group-hover:text-secondary transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-secondary transition-colors leading-snug">
+              Proppins – Real Estate Web Platform</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Full-featured real estate platform supporting Buy and Rent
+              modules with categorized listings, dynamic search, filtering, and secure data handling.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">React.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">MySQL</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">REST APIs</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">JavaScript</span>
+            </div>
+            <a href="https://proppins.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Alanati Pindivantalu – Traditional Sweets & Hot Foods Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-pink-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="800">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-bowl-food text-5xl text-slate-600 group-hover:text-pink-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-pink-500 transition-colors leading-snug">
+              Alanati Pindivantalu – Traditional Sweets & Hot Foods</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Culturally themed website for a traditional food brand with
+              clean, structured layouts and lightweight Alpine.js interactivity.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Blade</span>
+            </div>
+            <a href="https://alanatipindivantalu.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-pink-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Sansai – Business Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-sky-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="900">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-sky-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-car text-5xl text-slate-600 group-hover:text-sky-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-sky-500 transition-colors leading-snug">Sansai
+              – Business Website</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Responsive automobile business website with interactive UI
+              layouts, migrated to Laravel with reusable Blade templates following MVC architecture.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Laravel</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">MySQL</span>
+            </div>
+            <a href="https://sansai.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-sky-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Madroidix Technologies – Company Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-blue-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="1000">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-laptop-code text-5xl text-slate-600 group-hover:text-blue-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-blue-500 transition-colors leading-snug">
+              Madroidix Technologies – Company Website</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Responsive web pages for a custom software company showcasing
+              expertise across web, mobile, and backend domains with engaging service presentations.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Alpine.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Laravel</span>
+            </div>
+            <a href="https://madroidix.com/" target="_blank"
+              class="inline-flex items-center gap-2 text-blue-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+        <!-- Neosys Tech Solutions – Corporate Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-violet-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="1100">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-violet-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-network-wired text-5xl text-slate-600 group-hover:text-violet-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-violet-500 transition-colors leading-snug">
+              Neosys Tech Solutions – Corporate Website</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Corporate website showcasing services, solutions, and business
+              offerings with responsive, interactive UI focusing on performance and modern web standards.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">React.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">HTML5</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">CSS3</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Bootstrap</span>
+            </div>
+            <span class="inline-flex items-center gap-2 text-slate-500 text-sm font-medium cursor-default"><i
+                class="fas fa-lock text-xs"></i> Private Project</span>
+          </div>
+        </div>
+
+        <!-- Himy The Street Cuisine – Restaurant Website -->
+        <div
+          class="group relative rounded-2xl overflow-hidden glass border border-slate-700 hover:border-orange-500 transition-all duration-500"
+          data-aos="fade-up" data-aos-delay="1200">
+          <div
+            class="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+            </div>
+            <i
+              class="fas fa-utensils text-5xl text-slate-600 group-hover:text-orange-500 transition-colors transform group-hover:scale-110 duration-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-orange-500 transition-colors leading-snug">
+              Himy The Street Cuisine – Restaurant Website</h3>
+            <p class="text-slate-400 text-sm mb-4 mt-2">Responsive restaurant website with menu displays, business
+              information, and customer engagement sections with performance-optimized, mobile-friendly UI.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">React.js</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300">JavaScript</span>
+            </div>
+            <a href="https://himythestreetcuisine.co.uk/" target="_blank"
+              class="inline-flex items-center gap-2 text-orange-500 hover:text-white transition-colors text-sm font-medium">Visit
+              Site <i class="fas fa-external-link-alt text-xs"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-dark relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div data-aos="fade-up">
+        <p class="text-primary font-medium tracking-widest uppercase text-sm mb-4">Get in Touch</p>
+        <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-8">Let's Work Together</h2>
+        <p class="text-slate-400 mb-10 max-w-xl mx-auto text-lg">
+          I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best
+          to get back to you!
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-16">
+          <a href="https://wa.me/919642882975" target="_blank"
+            class="dark-btn px-8 py-4 bg-white text-darker font-bold rounded-full hover:bg-slate-200 transition-colors shadow-lg shadow-white/10 flex items-center gap-2">
+            <i class="fab fa-whatsapp"></i> Say Hello
+          </a>
+          <a href="https://www.linkedin.com/in/jhansi-lakshmi-gondi/" target="_blank"
+            class="px-8 py-4 glass text-white font-bold rounded-full hover:border-primary border border-transparent transition-all flex items-center gap-2">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+        <div class="flex justify-center gap-8 text-3xl">
+          <a href="https://github.com/JhansiGondi" target="_blank"
+            class="text-slate-500 hover:text-white transition-colors transform hover:scale-110"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jhansi-lakshmi-gondi/" target="_blank"
+            class="text-slate-500 hover:text-blue-500 transition-colors transform hover:scale-110"><i
+              class="fab fa-linkedin"></i></a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-darker border-t border-slate-800 text-center">
+    <p class="text-slate-500 text-sm">
+      Copyright &copy; 2026 Jhansi Lakshmi Gondi. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      once: true,
+      offset: 50,
+      duration: 1000,
+    });
+
+    // Typewriter Effect
+    const roles = ["Full Stack Web Developer", "React Developer", "Laravel Developer", "Frontend Engineer", "Backend Developer"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typeWriterElement = document.getElementById('typewriter');
+
+    function typeWriter() {
+      const currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        typeWriterElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typeWriterElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        setTimeout(typeWriter, 2000); // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeWriter, 500); // Pause before new word
+      } else {
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    // Start Typewriter
+    document.addEventListener('DOMContentLoaded', typeWriter);
+
+    // Navbar always uses glass effect now
+
+    // Mobile Menu Toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
+    });
+    // Number Counter Animation
+    const statsContainer = document.getElementById('stats-container');
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let animatedStats = false;
+
+    const animateValue = (obj, start, end, duration, decimals, suffix) => {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 4);
+        const current = progress * (end - start) + start;
+
+        if (decimals > 0) {
+          obj.innerHTML = current.toFixed(decimals) + (suffix || '');
+        } else {
+          obj.innerHTML = Math.floor(current) + (suffix || '');
+        }
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+          obj.innerHTML = (decimals > 0 ? end.toFixed(decimals) : end) + (suffix || '');
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !animatedStats) {
+        animatedStats = true;
+        statNumbers.forEach(stat => {
+          const target = parseFloat(stat.getAttribute('data-target'));
+          const decimals = parseInt(stat.getAttribute('data-decimals') || 0);
+          const suffix = stat.getAttribute('data-suffix') || '';
+          animateValue(stat, 0, target, 2500, decimals, suffix);
+        });
+      }
+    }, { threshold: 0.5 });
+
+    if (statsContainer) {
+      statsObserver.observe(statsContainer);
+    }
+  </script>
+</body>
+
+</html>
